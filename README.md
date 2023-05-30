@@ -1,27 +1,45 @@
-# NgExercise1
+# Angular Exercise 1
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
 
-## Development server
+## Tasks
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Part 1
 
-## Code scaffolding
+- have a quick overview of the project structure
+- start the application
+- integrate [Angular Material](https://material.angular.io/) components with the project
+- integrate the [Toolbar](https://material.angular.io/components/toolbar/overview) component to the app home page
+- integrate the [Tabs](https://material.angular.io/components/tabs/overview) component that takes the whole space on the page
+
+### Part 2
+
+- add a new [Button](https://material.angular.io/components/button/overview) to the application toolbar, with the `Notify` caption and `Send Notification` [Tooltip](https://material.angular.io/components/tooltip/overview)
+- introduce a new Angular service `NotificationService` as `src/app/services/notification.service.ts`
+- provide a public method to display a simple [Snackbar](https://material.angular.io/components/snack-bar/overview) with the provided message
+- inject the `NotificationService` into the main application component
+- for the click handler of the `Notify` button, invoke your custom `NotificationService` to display the notification message.
+
+### Part 3
+
+- run application unit tests
+- create a unit test for the `NotificationService` to cover the sending messages functionality
+
+## Resources
+
+### Development server
+
+Run `npm start` for a dev server, it will automatically navigate to `http://localhost:4200/`.
+The application will automatically reload if you change any of the source files.
+
+### Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
+### Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
+### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
