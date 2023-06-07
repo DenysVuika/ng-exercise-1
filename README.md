@@ -13,6 +13,30 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - integrate the [Toolbar](https://material.angular.io/components/toolbar/overview) component to the app home page
 - integrate the [Tabs](https://material.angular.io/components/tabs/overview) component that takes the whole space on the page
 
+#### Troubleshoting
+
+If you run into issues with Theming integration, the following block from the [material theming docs](https://material.angular.io/guide/theming#using-a-pre-built-theme) should help
+
+```scss
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$my-primary: mat.define-palette(mat.$indigo-palette, 500);
+$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+@include mat.all-component-themes($my-theme);
+```
+
 ### Part 2
 
 - add a new [Button](https://material.angular.io/components/button/overview) to the application toolbar, with the `Notify` caption and `Send Notification` [Tooltip](https://material.angular.io/components/tooltip/overview)
